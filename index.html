@@ -1,141 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cookie Testing Website</title>
+    <meta charset="UTF-8">
+    <title>Cookie Discovery Test Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f5f5;
-    margin:40px;
-}
+    <style>
+        body{
+            font-family:Arial,Helvetica,sans-serif;
+            background:#f5f5f5;
+            margin:0;
+            padding:40px;
+        }
 
-.container{
-    max-width:900px;
-    margin:auto;
-    background:#fff;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.15);
-}
+        .container{
+            max-width:1000px;
+            margin:auto;
+            background:#fff;
+            padding:30px;
+            border-radius:8px;
+            box-shadow:0 0 10px rgba(0,0,0,.15);
+        }
 
-button{
-    padding:12px 20px;
-    margin:8px;
-    border:none;
-    background:#0078d4;
-    color:#fff;
-    border-radius:5px;
-    cursor:pointer;
-}
+        h1{
+            color:#0d6efd;
+        }
 
-button:hover{
-    background:#005fa3;
-}
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:25px;
+        }
 
-.category{
-    margin-top:25px;
-    padding:15px;
-    border:1px solid #ddd;
-    border-radius:8px;
-}
+        table,th,td{
+            border:1px solid #ccc;
+        }
 
-.success{
-    color:green;
-    font-weight:bold;
-}
-</style>
+        th{
+            background:#0d6efd;
+            color:#fff;
+            padding:10px;
+        }
 
+        td{
+            padding:10px;
+        }
+
+        .success{
+            color:green;
+            font-weight:bold;
+            margin-top:20px;
+        }
+    </style>
 </head>
+
 <body>
 
 <div class="container">
 
-<h1>Cookie Testing Page</h1>
+<h1>Cookie Discovery Test Website</h1>
 
 <p>
-This page generates cookies belonging to different consent categories.
-Open Developer Tools → Application → Cookies to verify them.
+This page automatically creates cookies when loaded.
 </p>
 
-<button onclick="createAllCookies()">Create All Cookies</button>
+<p class="success">
+✔ Cookies generated automatically.
+</p>
 
-<p id="status" class="success"></p>
+<table>
 
-<div class="category">
-<h3>Cookie Categories</h3>
+<tr>
+<th>Category</th>
+<th>Cookies</th>
+</tr>
 
-<ul>
-<li>Necessary</li>
-<li>Marketing</li>
-<li>Functional</li>
-<li>Analytics</li>
-<li>Security</li>
-<li>Personalization</li>
-</ul>
+<tr>
+<td>Necessary</td>
+<td>PHPSESSID, JSESSIONID, cookie_consent, XSRF-TOKEN, session_id</td>
+</tr>
 
-</div>
+<tr>
+<td>Marketing</td>
+<td>_fbp, IDE, fr, test_cookie, ads_campaign</td>
+</tr>
+
+<tr>
+<td>Analytics</td>
+<td>_ga, _gid, _gat, analytics_session, visitor_id</td>
+</tr>
+
+<tr>
+<td>Functional</td>
+<td>language, timezone, currency, theme, chat_widget</td>
+</tr>
+
+<tr>
+<td>Security</td>
+<td>csrf_token, auth_token, secure_login, device_id, secure_session</td>
+</tr>
+
+<tr>
+<td>Personalization</td>
+<td>recent_view, recommended_items, user_preferences, preferred_category, ui_layout</td>
+</tr>
+
+</table>
 
 </div>
 
 <script>
 
-function setCookie(name,value,days){
-    const d=new Date();
+function createCookie(name,value,days){
+
+    var d = new Date();
     d.setTime(d.getTime()+(days*24*60*60*1000));
-    let expires="expires="+d.toUTCString();
-    document.cookie=name+"="+value+";"+expires+";path=/";
+
+    document.cookie =
+        name + "=" + value +
+        "; expires=" + d.toUTCString() +
+        "; path=/";
 }
 
-function createAllCookies(){
+window.onload=function(){
 
-    // -------------------------
-    // Necessary Cookies
-    // -------------------------
-    setCookie("necessary_session","abc123",30);
-    setCookie("necessary_language","en",30);
-    setCookie("necessary_consent","accepted",30);
+/* ---------------- Necessary ---------------- */
 
-    // -------------------------
-    // Marketing Cookies
-    // -------------------------
-    setCookie("marketing_campaign","summer_sale",30);
-    setCookie("marketing_adid","MKT789654",30);
-    setCookie("marketing_affiliate","affiliate001",30);
+createCookie("PHPSESSID","A12345BCDE",30);
+createCookie("JSESSIONID","JSESSION99887",30);
+createCookie("cookie_consent","accepted",365);
+createCookie("XSRF-TOKEN","xsrf987654",30);
+createCookie("session_id","SID123456789",30);
 
-    // -------------------------
-    // Functional Cookies
-    // -------------------------
-    setCookie("functional_theme","dark",30);
-    setCookie("functional_fontsize","medium",30);
-    setCookie("functional_timezone","Asia_Kolkata",30);
+/* ---------------- Marketing ---------------- */
 
-    // -------------------------
-    // Analytics Cookies
-    // -------------------------
-    setCookie("analytics_ga","GA-987654",30);
-    setCookie("analytics_session","session987",30);
-    setCookie("analytics_visit","25",30);
+createCookie("_fbp","fb.1.123456789",90);
+createCookie("IDE","google_ads",90);
+createCookie("fr","facebook_cookie",90);
+createCookie("test_cookie","doubleclick",30);
+createCookie("ads_campaign","summer_sale",90);
 
-    // -------------------------
-    // Security Cookies
-    // -------------------------
-    setCookie("security_csrf","csrf_token_12345",30);
-    setCookie("security_auth","auth_token_xyz",30);
-    setCookie("security_device","trusted",30);
+/* ---------------- Analytics ---------------- */
 
-    // -------------------------
-    // Personalization Cookies
-    // -------------------------
-    setCookie("personalization_language","English",30);
-    setCookie("personalization_currency","INR",30);
-    setCookie("personalization_recommendation","electronics",30);
+createCookie("_ga","GA1.2.987654321",730);
+createCookie("_gid","GA1.2.123456789",1);
+createCookie("_gat","1",1);
+createCookie("analytics_session","SESSION123",30);
+createCookie("visitor_id","VIS987654",365);
 
-    document.getElementById("status").innerHTML =
-    "✔ All category cookies have been created successfully.";
-}
+/* ---------------- Functional ---------------- */
+
+createCookie("language","en",365);
+createCookie("timezone","Asia/Kolkata",365);
+createCookie("currency","INR",365);
+createCookie("theme","dark",365);
+createCookie("chat_widget","enabled",365);
+
+/* ---------------- Security ---------------- */
+
+createCookie("csrf_token","csrf987654",30);
+createCookie("auth_token","auth123456",30);
+createCookie("secure_login","true",30);
+createCookie("device_id","device9988",365);
+createCookie("secure_session","enabled",30);
+
+/* ---------------- Personalization ---------------- */
+
+createCookie("recent_view","Laptop",365);
+createCookie("recommended_items","Mobiles",365);
+createCookie("user_preferences","DarkMode",365);
+createCookie("preferred_category","Electronics",365);
+createCookie("ui_layout","Grid",365);
+
+};
 
 </script>
 
