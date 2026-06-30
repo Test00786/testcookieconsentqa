@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Testing Website</title>
+
+<style>
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f5f5;
+    margin:40px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+button{
+    padding:12px 20px;
+    margin:8px;
+    border:none;
+    background:#0078d4;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#005fa3;
+}
+
+.category{
+    margin-top:25px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.success{
+    color:green;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Cookie Testing Page</h1>
+
+<p>
+This page generates cookies belonging to different consent categories.
+Open Developer Tools → Application → Cookies to verify them.
+</p>
+
+<button onclick="createAllCookies()">Create All Cookies</button>
+
+<p id="status" class="success"></p>
+
+<div class="category">
+<h3>Cookie Categories</h3>
+
+<ul>
+<li>Necessary</li>
+<li>Marketing</li>
+<li>Functional</li>
+<li>Analytics</li>
+<li>Security</li>
+<li>Personalization</li>
+</ul>
+
+</div>
+
+</div>
+
+<script>
+
+function setCookie(name,value,days){
+    const d=new Date();
+    d.setTime(d.getTime()+(days*24*60*60*1000));
+    let expires="expires="+d.toUTCString();
+    document.cookie=name+"="+value+";"+expires+";path=/";
+}
+
+function createAllCookies(){
+
+    // -------------------------
+    // Necessary Cookies
+    // -------------------------
+    setCookie("necessary_session","abc123",30);
+    setCookie("necessary_language","en",30);
+    setCookie("necessary_consent","accepted",30);
+
+    // -------------------------
+    // Marketing Cookies
+    // -------------------------
+    setCookie("marketing_campaign","summer_sale",30);
+    setCookie("marketing_adid","MKT789654",30);
+    setCookie("marketing_affiliate","affiliate001",30);
+
+    // -------------------------
+    // Functional Cookies
+    // -------------------------
+    setCookie("functional_theme","dark",30);
+    setCookie("functional_fontsize","medium",30);
+    setCookie("functional_timezone","Asia_Kolkata",30);
+
+    // -------------------------
+    // Analytics Cookies
+    // -------------------------
+    setCookie("analytics_ga","GA-987654",30);
+    setCookie("analytics_session","session987",30);
+    setCookie("analytics_visit","25",30);
+
+    // -------------------------
+    // Security Cookies
+    // -------------------------
+    setCookie("security_csrf","csrf_token_12345",30);
+    setCookie("security_auth","auth_token_xyz",30);
+    setCookie("security_device","trusted",30);
+
+    // -------------------------
+    // Personalization Cookies
+    // -------------------------
+    setCookie("personalization_language","English",30);
+    setCookie("personalization_currency","INR",30);
+    setCookie("personalization_recommendation","electronics",30);
+
+    document.getElementById("status").innerHTML =
+    "✔ All category cookies have been created successfully.";
+}
+
+</script>
+
+</body>
+</html>
