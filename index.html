@@ -1,180 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Cookie Discovery Test Website</title>
+    <title>Seqrite Demo Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
-        body{
-            font-family:Arial,Helvetica,sans-serif;
-            background:#f5f5f5;
-            margin:0;
-            padding:40px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .container{
-            max-width:1000px;
-            margin:auto;
-            background:#fff;
-            padding:30px;
-            border-radius:8px;
-            box-shadow:0 0 10px rgba(0,0,0,.15);
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f9;
+            padding: 40px;
         }
 
-        h1{
-            color:#0d6efd;
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            padding: 35px;
         }
 
-        table{
-            width:100%;
-            border-collapse:collapse;
-            margin-top:25px;
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 3px solid #E30613;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
 
-        table,th,td{
-            border:1px solid #ccc;
+        .logo {
+            width: 90px;
+            height: auto;
         }
 
-        th{
-            background:#0d6efd;
-            color:#fff;
-            padding:10px;
+        .title h1 {
+            color: #E30613;
+            font-size: 34px;
+            margin-bottom: 8px;
         }
 
-        td{
-            padding:10px;
+        .title p {
+            color: #555;
+            font-size: 17px;
         }
 
-        .success{
-            color:green;
-            font-weight:bold;
-            margin-top:20px;
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        p {
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        .success {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #d9d9d9;
+        }
+
+        th {
+            background: #E30613;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
         }
     </style>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<h1>Cookie Discovery Test Website</h1>
+        <div class="header">
+            <!--img src="Seqrite_logo.png" alt="Seqrite Logo" class="logo"-->
+			<img src="https://techbagfrontend.s3-ap-south-1.amazonaws.com/logos/7p1RWhvgggkD1oiwn4DHUe.png" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 450px; height: 108px; margin: 0px; width: 97px;" alt="Seqrite EPS Cloud: Centralized Endpoint Security" jsname="kn3ccd">
 
-<p>
-This page automatically creates cookies when loaded.
-</p>
+            <div class="title">
+                <h1>Seqrite Demo Website</h1>
+                <p>Cookie Discovery & Consent Testing Portal</p>
+            </div>
+        </div>
 
-<p class="success">
-✔ Cookies generated automatically.
-</p>
+        <h2>Cookie Discovery Test Website</h2>
 
-<table>
+        <p>
+            This website automatically creates cookies when the page loads.
+            It is intended for testing Cookie Discovery and Cookie Consent
+            Management solutions.
+        </p>
 
-<tr>
-<th>Category</th>
-<th>Cookies</th>
-</tr>
+        <p class="success">
+            ✔ Cookies generated automatically.
+        </p>
 
-<tr>
-<td>Necessary</td>
-<td>PHPSESSID, JSESSIONID, cookie_consent, XSRF-TOKEN, session_id</td>
-</tr>
+        <table>
 
-<tr>
-<td>Marketing</td>
-<td>_fbp, IDE, fr, test_cookie, ads_campaign</td>
-</tr>
+            <tr>
+                <th>Category</th>
+                <th>Cookies</th>
+            </tr>
 
-<tr>
-<td>Analytics</td>
-<td>_ga, _gid, _gat, analytics_session, visitor_id</td>
-</tr>
+            <tr>
+                <td>Necessary</td>
+                <td>PHPSESSID, JSESSIONID, cookie_consent, XSRF-TOKEN, session_id</td>
+            </tr>
 
-<tr>
-<td>Functional</td>
-<td>language, timezone, currency, theme, chat_widget</td>
-</tr>
+            <tr>
+                <td>Marketing</td>
+                <td>_fbp, IDE, fr, test_cookie, ads_campaign</td>
+            </tr>
 
-<tr>
-<td>Security</td>
-<td>csrf_token, auth_token, secure_login, device_id, secure_session</td>
-</tr>
+            <tr>
+                <td>Analytics</td>
+                <td>_ga, _gid, _gat, analytics_session, visitor_id</td>
+            </tr>
 
-<tr>
-<td>Personalization</td>
-<td>recent_view, recommended_items, user_preferences, preferred_category, ui_layout</td>
-</tr>
+            <tr>
+                <td>Functional</td>
+                <td>language, timezone, currency, theme, chat_widget</td>
+            </tr>
 
-</table>
+            <tr>
+                <td>Security</td>
+                <td>csrf_token, auth_token, secure_login, device_id, secure_session</td>
+            </tr>
 
-</div>
+            <tr>
+                <td>Personalization</td>
+                <td>recent_view, recommended_items, user_preferences, preferred_category, ui_layout</td>
+            </tr>
 
-<script>
+        </table>
 
-function createCookie(name,value,days){
+        <footer>
+            © 2026 Seqrite Demo Website | Cookie Discovery & Consent Testing Portal
+        </footer>
 
-    var d = new Date();
-    d.setTime(d.getTime()+(days*24*60*60*1000));
+    </div>
 
-    document.cookie =
-        name + "=" + value +
-        "; expires=" + d.toUTCString() +
-        "; path=/";
-}
+    <script>
 
-window.onload=function(){
+        function createCookie(name, value, days) {
 
-/* ---------------- Necessary ---------------- */
+            var d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
 
-createCookie("PHPSESSID","A12345BCDE",30);
-createCookie("JSESSIONID","JSESSION99887",30);
-createCookie("cookie_consent","accepted",365);
-createCookie("XSRF-TOKEN","xsrf987654",30);
-createCookie("session_id","SID123456789",30);
+            document.cookie =
+                name + "=" + value +
+                "; expires=" + d.toUTCString() +
+                "; path=/";
+        }
 
-/* ---------------- Marketing ---------------- */
+        window.onload = function () {
 
-createCookie("_fbp","fb.1.123456789",90);
-createCookie("IDE","google_ads",90);
-createCookie("fr","facebook_cookie",90);
-createCookie("test_cookie","doubleclick",30);
-createCookie("ads_campaign","summer_sale",90);
+            // Necessary
+            createCookie("PHPSESSID", "A12345BCDE", 30);
+            createCookie("JSESSIONID", "JSESSION99887", 30);
+            createCookie("cookie_consent", "accepted", 365);
+            createCookie("XSRF-TOKEN", "xsrf987654", 30);
+            createCookie("session_id", "SID123456789", 30);
 
-/* ---------------- Analytics ---------------- */
+            // Marketing
+            createCookie("_fbp", "fb.1.123456789", 90);
+            createCookie("IDE", "google_ads", 90);
+            createCookie("fr", "facebook_cookie", 90);
+            createCookie("test_cookie", "doubleclick", 30);
+            createCookie("ads_campaign", "summer_sale", 90);
 
-createCookie("_ga","GA1.2.987654321",730);
-createCookie("_gid","GA1.2.123456789",1);
-createCookie("_gat","1",1);
-createCookie("analytics_session","SESSION123",30);
-createCookie("visitor_id","VIS987654",365);
+            // Analytics
+            createCookie("_ga", "GA1.2.987654321", 730);
+            createCookie("_gid", "GA1.2.123456789", 1);
+            createCookie("_gat", "1", 1);
+            createCookie("analytics_session", "SESSION123", 30);
+            createCookie("visitor_id", "VIS987654", 365);
 
-/* ---------------- Functional ---------------- */
+            // Functional
+            createCookie("language", "en", 365);
+            createCookie("timezone", "Asia/Kolkata", 365);
+            createCookie("currency", "INR", 365);
+            createCookie("theme", "dark", 365);
+            createCookie("chat_widget", "enabled", 365);
 
-createCookie("language","en",365);
-createCookie("timezone","Asia/Kolkata",365);
-createCookie("currency","INR",365);
-createCookie("theme","dark",365);
-createCookie("chat_widget","enabled",365);
+            // Security
+            createCookie("csrf_token", "csrf987654", 30);
+            createCookie("auth_token", "auth123456", 30);
+            createCookie("secure_login", "true", 30);
+            createCookie("device_id", "device9988", 365);
+            createCookie("secure_session", "enabled", 30);
 
-/* ---------------- Security ---------------- */
+            // Personalization
+            createCookie("recent_view", "Laptop", 365);
+            createCookie("recommended_items", "Mobiles", 365);
+            createCookie("user_preferences", "DarkMode", 365);
+            createCookie("preferred_category", "Electronics", 365);
+            createCookie("ui_layout", "Grid", 365);
 
-createCookie("csrf_token","csrf987654",30);
-createCookie("auth_token","auth123456",30);
-createCookie("secure_login","true",30);
-createCookie("device_id","device9988",365);
-createCookie("secure_session","enabled",30);
+        };
 
-/* ---------------- Personalization ---------------- */
-
-createCookie("recent_view","Laptop",365);
-createCookie("recommended_items","Mobiles",365);
-createCookie("user_preferences","DarkMode",365);
-createCookie("preferred_category","Electronics",365);
-createCookie("ui_layout","Grid",365);
-
-};
-
-</script>
+    </script>
 
 </body>
+
 </html>
