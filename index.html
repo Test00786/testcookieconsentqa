@@ -1302,5 +1302,86 @@ All Rights Reserved.
 </p>
 
 </div>
+<script>
 
+function createCookie(name, value, days) {
+
+    var d = new Date();
+
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+
+    document.cookie =
+        name + "=" + value +
+        "; expires=" + d.toUTCString() +
+        "; path=/";
+
+}
+
+window.onload = function(){
+
+/* Necessary */
+
+createCookie("PHPSESSID","A12345BCDE",30);
+createCookie("JSESSIONID","JSESSION99887",30);
+createCookie("cookie_consent","accepted",365);
+createCookie("XSRF-TOKEN","xsrf987654",30);
+createCookie("session_id","SID123456789",30);
+
+/* Marketing */
+
+createCookie("_fbp","fb.1.123456789",90);
+createCookie("IDE","google_ads",90);
+createCookie("fr","facebook_cookie",90);
+createCookie("test_cookie","doubleclick",30);
+createCookie("ads_campaign","summer_sale",90);
+
+/* Analytics */
+
+createCookie("_ga","GA1.2.987654321",730);
+createCookie("_gid","GA1.2.123456789",1);
+createCookie("_gat","1",1);
+createCookie("analytics_session","SESSION123",30);
+createCookie("visitor_id","VIS987654",365);
+
+/* Functional */
+
+createCookie("language","en",365);
+createCookie("timezone","Asia/Kolkata",365);
+createCookie("currency","INR",365);
+createCookie("theme","dark",365);
+createCookie("chat_widget","enabled",365);
+
+/* Security */
+
+createCookie("csrf_token","csrf987654",30);
+createCookie("auth_token","auth123456",30);
+createCookie("secure_login","true",30);
+createCookie("device_id","device9988",365);
+createCookie("secure_session","enabled",30);
+
+/* Personalization */
+
+createCookie("recent_view","Laptop",365);
+createCookie("recommended_items","Mobiles",365);
+createCookie("user_preferences","DarkMode",365);
+createCookie("preferred_category","Electronics",365);
+createCookie("ui_layout","Grid",365);
+
+};
+
+</script>
+
+<link rel="stylesheet" href="seqrite-config.css"/>
+
+<script data-config="seqriteConfig"
+src="seqrite.js"></script>
+
+<script src="seqrite-config.js"></script>
+
+<script defer
+src="seqrite-enforcement.js"></script>
+
+</body>
+
+</html>
 </footer>
