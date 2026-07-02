@@ -6,9 +6,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>  Seqrite Demo Website</title>
+<title>Seqrite Demo Website</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Consent Widget styles (scoped to .widget-container, see file for details) -->
+<link rel="stylesheet" href="consent-widget.css">
 
 <style>
 
@@ -356,10 +359,7 @@ font-size:36px;
 
 <div class="logo">
 
-<img src="https://techbagfrontend.s3-ap-south-1.amazonaws.com/logos/7p1RWhvgggkD1oiwn4DHUe.png"
-     alt="Seqrite Logo"
-     style="width:48px; height:54px;">
-
+<img src="https://www.quickheal.co.in/static/version1782407041/frontend/quickheal/in/en_US/Quickheal_BlogFeed/images/default-blog.jpg" alt="Reddit Hacked? What to Do If Your Account Is Compromised" onerror="this.src='https://www.quickheal.co.in/static/version1782407041/frontend/quickheal/in/en_US/Quickheal_BlogFeed/images/default-blog.jpg'">
 
 <div>
 
@@ -586,7 +586,7 @@ phishing attacks and zero-day threats across enterprise devices.
 
 <div class="card">
 
-<img src="https://www.quickheal.co.in/static/version1782407041/frontend/quickheal/in/en_US/Quickheal_BlogFeed/images/default-blog.jpg" alt="Reddit Hacked? What to Do If Your Account Is Compromised" onerror="this.src='https://www.quickheal.co.in/static/version1782407041/frontend/quickheal/in/en_US/Quickheal_BlogFeed/images/default-blog.jpg'">
+<img scr="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&w=700&q=80">
 
 <h3>Email Security</h3>
 
@@ -1077,6 +1077,140 @@ and operational technology.
 
 </section>
 
+<!-- ================= Consent Management ================= -->
+
+<section class="section" style="background:#f5f7fa;">
+
+<div class="container">
+
+<h2 class="section-title">
+Manage Your Consent Preferences
+</h2>
+
+<p class="section-subtitle">
+Review and manage how your personal data is collected and used,
+in line with applicable data privacy regulations.
+</p>
+
+<div style="display:flex; justify-content:center; margin-top:50px;">
+
+  <div class="widget-container">
+    <div class="header-language-wrapper-container">
+      <div id="language-wrapper" style="display: none;">
+        <div class="dropdown">
+          <label for="langSelect">Language Preference <br></label>
+          <select id="langSelect"></select>
+        </div>
+      </div>
+    </div>
+    <div class="header-container">
+      <div class="logo-area" id="logo-area"></div>
+    </div>
+
+    <!-- Data Principal details: feeds dataPrincipalId in the consent config -->
+    <div id="dp-details" style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:16px;
+      margin-bottom:20px;
+      padding-bottom:20px;
+      border-bottom:2px solid #EBEDEE;
+    ">
+      <div>
+        <label for="dpFirstName" style="display:block; font-weight:bold; font-size:12px; color:#606190; margin-bottom:6px;">First Name</label>
+        <input type="text" id="dpFirstName" placeholder="First name" style="
+          width:100%; box-sizing:border-box; padding:8px 10px;
+          border:1px solid #E2E2FB; border-radius:2px; font-size:12px;
+          color:#43436C; background:#FAFBFF;">
+      </div>
+      <div>
+        <label for="dpLastName" style="display:block; font-weight:bold; font-size:12px; color:#606190; margin-bottom:6px;">Last Name</label>
+        <input type="text" id="dpLastName" placeholder="Last name" style="
+          width:100%; box-sizing:border-box; padding:8px 10px;
+          border:1px solid #E2E2FB; border-radius:2px; font-size:12px;
+          color:#43436C; background:#FAFBFF;">
+      </div>
+      <div>
+        <label for="dpEmail" style="display:block; font-weight:bold; font-size:12px; color:#606190; margin-bottom:6px;">Email</label>
+        <input type="email" id="dpEmail" placeholder="you@example.com" style="
+          width:100%; box-sizing:border-box; padding:8px 10px;
+          border:1px solid #E2E2FB; border-radius:2px; font-size:12px;
+          color:#43436C; background:#FAFBFF;">
+      </div>
+    </div>
+
+    <div class="preview-statements">
+      <div id="consent-root">Loading consent form...</div>
+      <div id="error-message" class="error-message"></div>
+      <div id="toast"></div>
+    </div>
+    <div class="full-width-footer-border"></div>
+    <div class="button-group" id="button-group">
+      <button class="cancel" id="cancelBtn" style="display: none;">Cancel</button>
+      <button class="submit" id="submitBtn" style="display: none;">Submit</button>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+  // Configuration options for the consent widget
+  window.consentWidgetConfig = {
+    consentFormId: "645af12a-cdd0-4227-a960-2c5111127034",
+    apiUrl: "https://starhealth.pre-dataprivacy.com/cpm-api/open-api/v1/consent/v1/getConsentFormById",
+    submitApiUrl: "https://starhealth.pre-dataprivacy.com/cpm-api/open-api/v1/consent/v1/createOrUpdateConsent",
+    tenantToken: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjMDE0NTczNi01MmIyLTRkMjEtOTQ2My0zZDI2NTQyMDQzZjciLCJwcm9kdWN0IjoiQ29uc2VudCBNYW5hZ21lbnQiLCJzY29wZSI6ImFjY2VzcyIsImlhdCI6MTc4Mjk3OTE4NiwiZXhwIjoxNzgzMDY1NTg2fQ.fIV77v5Bdp3T6FHWkMaTZk2SHsMs43VdBsNnCdG5064",
+    signatureServiceUrl: "https://starhealth.pre-dataprivacy.com/cpm-sign",
+    dataPrincipalId: [
+      { key: "firstName", value: "" },
+      { key: "lastName", value: "" },
+      { key: "email", value: "" }
+    ],
+    customAttributes: {
+      "ticketID": "",
+      "registration ID": ""
+    },
+    showButtons: true,
+    showLanguageDropdown: true,
+    enableCheckboxes: true,
+    enableRadioButtons: true,
+    enableDropdowns: true,
+    receivedType: "WEB"
+  };
+</script>
+
+<script>
+  // Keep dataPrincipalId in sync with the First Name / Last Name / Email
+  // fields above the widget. setDataPrincipalIdList() in script.js reads
+  // window.consentWidgetConfig.dataPrincipalId fresh at submit time, so
+  // updating it here on every keystroke is enough to feed through.
+  (function () {
+    function updateDataPrincipalId() {
+      var firstName = document.getElementById("dpFirstName")?.value.trim() || "";
+      var lastName = document.getElementById("dpLastName")?.value.trim() || "";
+      var email = document.getElementById("dpEmail")?.value.trim() || "";
+
+      window.consentWidgetConfig.dataPrincipalId = [
+        { key: "firstName", value: firstName },
+        { key: "lastName", value: lastName },
+        { key: "email", value: email }
+      ];
+    }
+
+    ["dpFirstName", "dpLastName", "dpEmail"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener("input", updateDataPrincipalId);
+    });
+
+    updateDataPrincipalId();
+  })();
+</script>
+<script src="script.js"></script>
+
 <!-- ================= Contact ================= -->
 
 <section
@@ -1302,86 +1436,5 @@ All Rights Reserved.
 </p>
 
 </div>
-<script>
 
-function createCookie(name, value, days) {
-
-    var d = new Date();
-
-    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-
-    document.cookie =
-        name + "=" + value +
-        "; expires=" + d.toUTCString() +
-        "; path=/";
-
-}
-
-window.onload = function(){
-
-/* Necessary */
-
-createCookie("PHPSESSID","A12345BCDE",30);
-createCookie("JSESSIONID","JSESSION99887",30);
-createCookie("cookie_consent","accepted",365);
-createCookie("XSRF-TOKEN","xsrf987654",30);
-createCookie("session_id","SID123456789",30);
-
-/* Marketing */
-
-createCookie("_fbp","fb.1.123456789",90);
-createCookie("IDE","google_ads",90);
-createCookie("fr","facebook_cookie",90);
-createCookie("test_cookie","doubleclick",30);
-createCookie("ads_campaign","summer_sale",90);
-
-/* Analytics */
-
-createCookie("_ga","GA1.2.987654321",730);
-createCookie("_gid","GA1.2.123456789",1);
-createCookie("_gat","1",1);
-createCookie("analytics_session","SESSION123",30);
-createCookie("visitor_id","VIS987654",365);
-
-/* Functional */
-
-createCookie("language","en",365);
-createCookie("timezone","Asia/Kolkata",365);
-createCookie("currency","INR",365);
-createCookie("theme","dark",365);
-createCookie("chat_widget","enabled",365);
-
-/* Security */
-
-createCookie("csrf_token","csrf987654",30);
-createCookie("auth_token","auth123456",30);
-createCookie("secure_login","true",30);
-createCookie("device_id","device9988",365);
-createCookie("secure_session","enabled",30);
-
-/* Personalization */
-
-createCookie("recent_view","Laptop",365);
-createCookie("recommended_items","Mobiles",365);
-createCookie("user_preferences","DarkMode",365);
-createCookie("preferred_category","Electronics",365);
-createCookie("ui_layout","Grid",365);
-
-};
-
-</script>
-
-<link rel="stylesheet" href="seqrite-config.css"/>
-
-<script data-config="seqriteConfig"
-src="seqrite.js"></script>
-
-<script src="seqrite-config.js"></script>
-
-<script defer
-src="seqrite-enforcement.js"></script>
-
-</body>
-
-</html>
 </footer>
