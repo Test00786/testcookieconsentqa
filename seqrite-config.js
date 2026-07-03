@@ -3,7 +3,7 @@ let userLang = (navigator.language || (navigator).userLanguage || 'en').split('-
 console.log("Browser Language Code: ", userLang);
 window.klaroConfig = {
   "consentManagerId": "6a4768820f9e2d7222096e30",
-  "uuid": "0cd33a41-dbfd-4343-92a5-1a7d1ac8140b",
+  "uuid": "20d44a1c-1961-440c-9733-fecbb0099dde",
   "domain": "https://vd9hzt.sqdataprivacy.com/cmapi",
   "version": 1,
   "elementID": "SEQRITE",
@@ -11,7 +11,7 @@ window.klaroConfig = {
   "storageMethod": "cookie",
   "storageName": "testcookieconsentqa_manish-781_workers_dev_",
   "cookieExpiresAfterDays": 365,
-  "default": true,
+  "default": false,
   "mustConsent": false,
   "acceptAll": true,
   "hideDeclineAll": false,
@@ -1716,7 +1716,7 @@ window.klaroConfig = {
       "description": "<p>We use these cookies to enhance website functionality and improve user experience. Information can include login data, region, language, and enhanced content.</p><details style=\"margin-top:10px\"><summary style=\"cursor:pointer;font-weight:600;padding:2px 0\">4 Cookies</summary><div style=\"margin-top:6px;max-height:150px;overflow-y:auto\"><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;PHPSESSID</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Functional Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;JSESSIONID</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Functional Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;test_cookie</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Functional Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;device_id</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Functional Cookies</div></div></div></details>",
       "purposes": [],
       "required": true,
-      "default": true,
+      "default": false,
       "optOut": false,
       "onlyOnce": true,
       "cookies": [
@@ -1732,7 +1732,7 @@ window.klaroConfig = {
       "description": "<p>These cookies help us analyze website traffic, user behavior, and engagement patterns. The insights gathered allow us to optimize content, enhance usability, and improve overall site performance.</p><details style=\"margin-top:10px\"><summary style=\"cursor:pointer;font-weight:600;padding:2px 0\">3 Cookies</summary><div style=\"margin-top:6px;max-height:150px;overflow-y:auto\"><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;_ga</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Google Analytics</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;_gid</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Google Analytics</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;_gat</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Google Analytics</div></div></div></details>",
       "purposes": [],
       "required": false,
-      "default": true,
+      "default": false,
       "optOut": false,
       "onlyOnce": true,
       "cookies": [
@@ -1747,7 +1747,7 @@ window.klaroConfig = {
       "description": "<p>These cookies are used by our advertising partners to deliver personalized ads and measure the effectiveness of marketing campaigns. They help provide relevant promotions based on user interests and browsing behavior.</p><details style=\"margin-top:10px\"><summary style=\"cursor:pointer;font-weight:600;padding:2px 0\">5 Cookies</summary><div style=\"margin-top:6px;max-height:150px;overflow-y:auto\"><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;_fbp</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Facebook/Meta Pixel</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;IDE</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Marketing Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;fr</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Marketing Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;visitor_id</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Marketing Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;auth_token</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Marketing Cookies</div></div></div></details>",
       "purposes": [],
       "required": false,
-      "default": true,
+      "default": false,
       "optOut": false,
       "onlyOnce": true,
       "cookies": [
@@ -1764,7 +1764,7 @@ window.klaroConfig = {
       "description": "<p>This category includes cookies that do not fit into the predefined categories but may be necessary for certain website functionalities or improvements.</p><details style=\"margin-top:10px\"><summary style=\"cursor:pointer;font-weight:600;padding:2px 0\">16 Cookies</summary><div style=\"margin-top:6px;max-height:150px;overflow-y:auto\"><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;cookie_consent</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;session_id</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;ads_campaign</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;analytics_session</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;language</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;timezone</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;currency</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;chat_widget</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;csrf_token</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;secure_login</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;secure_session</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;recommended_items</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;user_preferences</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;preferred_category</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;ui_layout</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;testcookieconsent_netlify_app_</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div></div></details>",
       "purposes": [],
       "required": false,
-      "default": true,
+      "default": false,
       "optOut": false,
       "onlyOnce": true,
       "cookies": [
@@ -1792,7 +1792,7 @@ window.klaroConfig = {
       "description": "<p>Security cookies help protect user data by enabling authentication, fraud prevention, and secure browsing. They ensure that sensitive information, such as login credentials, is transmitted safely over encrypted connections.</p><details style=\"margin-top:10px\"><summary style=\"cursor:pointer;font-weight:600;padding:2px 0\">1 Cookie</summary><div style=\"margin-top:6px;max-height:150px;overflow-y:auto\"><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;XSRF-TOKEN</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div></div></details>",
       "purposes": [],
       "required": false,
-      "default": true,
+      "default": false,
       "optOut": false,
       "onlyOnce": true,
       "cookies": [
@@ -1805,7 +1805,7 @@ window.klaroConfig = {
       "description": "<p>These cookies remember user preferences, such as language, currency, and theme settings, to provide a tailored browsing experience that aligns with individual needs.</p><details style=\"margin-top:10px\"><summary style=\"cursor:pointer;font-weight:600;padding:2px 0\">2 Cookies</summary><div style=\"margin-top:6px;max-height:150px;overflow-y:auto\"><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;theme</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div><div style=\"padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.07);font-size:12px;line-height:1.8\"><div><b>Name:</b>&nbsp;recent_view</div><div><b>Host:</b>&nbsp;testcookieconsentqa.manish-781.workers.dev</div><div><b>Service:</b>&nbsp;Other Cookies</div></div></div></details>",
       "purposes": [],
       "required": false,
-      "default": true,
+      "default": false,
       "optOut": false,
       "onlyOnce": true,
       "cookies": [
