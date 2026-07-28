@@ -1381,5 +1381,32 @@ src="seqrite.js"></script>
 <script defer
 src="seqrite-enforcement.js"></script>
 
+<script>
+window.onload = function () {
+
+    // Session Cookie
+    document.cookie = "session_id=ABC123XYZ; path=/";
+
+    // Persistent Cookie (Expires after 30 days)
+    const expiry = new Date();
+    expiry.setDate(expiry.getDate() + 30);
+
+    document.cookie = "user_preference=dark; expires=" + expiry.toUTCString() + "; path=/";
+
+    // Analytics Cookie
+    document.cookie = "_ga=GA1.2.123456789.987654321; expires=" + expiry.toUTCString() + "; path=/";
+
+    // Marketing Cookie
+    document.cookie = "_fbp=fb.1.1234567890.987654321; expires=" + expiry.toUTCString() + "; path=/";
+
+    // Functional Cookie
+    document.cookie = "language=en; expires=" + expiry.toUTCString() + "; path=/";
+
+    console.log("Test cookies created.");
+};
+</script> 
+
+<link rel="stylesheet" href="https://starhealth.pre-dataprivacy.com/cmapi/dynamic/v1/config/css/6a61aa5d9f7c8e430c7f3a0a"/>
+<script type="application/javascript" src="https://starhealth.pre-dataprivacy.com/cmapi/dynamic/v1/config/js/6a61aa5d9f7c8e430c7f3a0a"></script>    
 </html>
 </footer>
