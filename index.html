@@ -354,7 +354,19 @@ font-size:36px;
   document.cookie = "username=SDP_QA; expires=Fri, 31 Dec 2027 23:59:59 UTC; path=/";
   document.cookie = "additonal_name=SDP_DEV; expires=Fri, 31 Dec 2027 23:59:59 UTC; path=/";
 </script>
+<!-- Meta Pixel cookies: browser ID + click ID -->
+<script>
+  document.cookie = '_fbc=fb.1.' + Date.now() + '.IwAR0test123; path=/; max-age=7776000';
+  console.log('Meta Pixel click-ID cookie set: _fbc');
+</script>
 
+<!-- Bing Ads UET cookies: session, visitor, Microsoft User ID -->
+<script>
+  document.cookie = '_uetsid=uet-sess-' + Math.random().toString(36).slice(2) + '; path=/; max-age=1800';
+  document.cookie = '_uetvid=uet-vid-'  + Math.random().toString(36).slice(2) + '; path=/; max-age=15552000';
+  document.cookie = 'MUID=MUID-' + Math.random().toString(36).slice(2).toUpperCase() + '; path=/; max-age=31536000';
+  console.log('Bing Ads UET cookies set: _uetsid, _uetvid, MUID');
+</script>
  <script>
  
 <div class="container">
