@@ -352,6 +352,7 @@ font-size:36px;
 <script>
   // Syntax: document.cookie = "key=value; expires=date; path=/";
   document.cookie = "username=SDP_QA; expires=Fri, 31 Dec 2027 23:59:59 UTC; path=/";
+  document.cookie = "additonal_name=SDP_DEV; expires=Fri, 31 Dec 2027 23:59:59 UTC; path=/";
 </script>
 
  <script>
@@ -1413,11 +1414,11 @@ window.onload = function () {
     // Analytics Cookie
     document.cookie = "_ga=GA1.2.123456789.987654321; expires=" + expiry.toUTCString() + "; path=/";
   
-    document.cookie = "_ga=GA2.2.123456789.987654321; expires=" + expiry.toUTCString() + "; path=/";
+    document.cookie = "_ga1=GA2.2.123456789.987654321; expires=" + expiry.toUTCString() + "; path=/";
 
     // Marketing Cookie
     document.cookie = "_fbp=fb.1.1234567890.987654321; expires=" + expiry.toUTCString() + "; path=/";
-    document.cookie = "_fbp=fb.2.1234567890.987654321; expires=" + expiry.toUTCString() + "; path=/";
+    document.cookie = "_fbp1=fb.2.1234567890.987654321; expires=" + expiry.toUTCString() + "; path=/";
     // Functional Cookie
     document.cookie = "language=en; expires=" + expiry.toUTCString() + "; path=/";
     document.cookie = "language=mr; expires=" + expiry.toUTCString() + "; path=/";
