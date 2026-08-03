@@ -349,26 +349,7 @@ font-size:36px;
 <body>
 
 <header>
-<script>
-  // Syntax: document.cookie = "key=value; expires=date; path=/";
-  document.cookie = "username=SDP_QA; expires=Fri, 31 Dec 2027 23:59:59 UTC; path=/";
-  document.cookie = "additonal_name=SDP_DEV; expires=Fri, 31 Dec 2027 23:59:59 UTC; path=/";
-</script>
-<!-- Meta Pixel cookies: browser ID + click ID -->
-<script>
-  document.cookie = '_fbc=fb.1.' + Date.now() + '.IwAR0test123; path=/; max-age=7776000';
-  console.log('Meta Pixel click-ID cookie set: _fbc');
-</script>
 
-<!-- Bing Ads UET cookies: session, visitor, Microsoft User ID -->
-<script>
-  document.cookie = '_uetsid=uet-sess-' + Math.random().toString(36).slice(2) + '; path=/; max-age=1800';
-  document.cookie = '_uetvid=uet-vid-'  + Math.random().toString(36).slice(2) + '; path=/; max-age=15552000';
-  document.cookie = 'MUID=MUID-' + Math.random().toString(36).slice(2).toUpperCase() + '; path=/; max-age=31536000';
-  console.log('Bing Ads UET cookies set: _uetsid, _uetvid, MUID');
-</script>
- <script>
- 
 <div class="container">
 
 <div class="navbar">
@@ -395,14 +376,6 @@ font-size:36px;
 <ul>
 
 <li><a href="index.html">Home</a></li>
-
-<li><a href="products.html">Products</a></li>
-
-<li><a href="solutions.html">Solutions</a></li>
-
-<li><a href="resources.html">Resources</a></li>
-
-<li><a href="contact.html">Contact</a></li>
 
 </ul>
 
@@ -1328,7 +1301,7 @@ function createCookie(name, value, days) {
   document.cookie = name + "=" + value + "; expires=" + d.toUTCString() + "; path=/";
 }
 </script>
- 
+
 <script type="text/plain" data-type="application/javascript" data-name="others">
 createCookie("PHPSESSID", "A12345BCDE", 30);
 createCookie("JSESSIONID", "JSESSION99887", 30);
@@ -1359,6 +1332,9 @@ createCookie("_gid", "GA1.2.123456789", 1);
 createCookie("_gat", "1", 1);
 createCookie("analytics_session", "SESSION123", 30);
 createCookie("visitor_id", "VIS987654", 365);
+document.cookie = '_uetsid=uet-sess-' + Math.random().toString(36).slice(2) + '; path=/; max-age=1800';
+document.cookie = '_uetvid=uet-vid-'  + Math.random().toString(36).slice(2) + '; path=/; max-age=15552000';
+document.cookie = 'MUID=MUID-' + Math.random().toString(36).slice(2).toUpperCase() + '; path=/; max-age=31536000';
 </script>
  
 <script type="text/plain" data-type="application/javascript" data-name="functional">
@@ -1381,5 +1357,7 @@ createCookie("ui_layout", "Grid", 365);
 <!-- Cookie Consent Launcher  -->
 <link rel="stylesheet" href="https://starhealth.pre-dataprivacy.com/cmapi/dynamic/v1/config/css/6a6aebd5da84263894487e2f"/>
 <script type="application/javascript" src="https://starhealth.pre-dataprivacy.com/cmapi/dynamic/v1/config/js/6a6aebd5da84263894487e2f"></script>
-</html>
 </footer>
+
+</body>
+</html>
