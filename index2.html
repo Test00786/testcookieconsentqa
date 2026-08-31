@@ -1365,5 +1365,14 @@ createCookie("__cmpQQ_usedCoookies", "xsrf987654", 30);
 
 </footer>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("loggedIn") !== "true") {
+        window.location.href = "original index.html";
+    }
+});
+</script>
+
 </body>
 </html>
